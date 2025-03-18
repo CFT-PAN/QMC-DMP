@@ -53,7 +53,7 @@ The data will be useful to researchers who wish to perform further analysis on t
 
 ## 2. FAIR data
 
-   ### 1. Making data findable, including provisions for metadata
+### 2.1 Making data findable, including provisions for metadata
 
 **Will data be identified by a persistent identifier?**
 
@@ -71,9 +71,9 @@ Keywords will be used when required by publications associated with the data. Wh
 
 "All metadata is exported via OAI-PMH and can be harvested" as per the TR policy.
 
-### 2. Making data accessible
+### 2.2 Making data accessible
 
-**Repository:**
+#### Repository:
 
 **Will the data be deposited in a trusted repository?**
 
@@ -89,7 +89,7 @@ Not applicable as the TR and the CR are free to use by the public.
 
 The TR assigns a DOI to each set of data, which will be used as the identifier. Furthermore, the TR allows versioning of data. 
 
-**Data:**
+#### Data:
 
 **Will all data be made openly available? If certain datasets cannot be shared (or need to be shared under restricted access conditions), explain why, clearly separating legal and contractual reasons from intentional restrictions. Note that in multi-beneficiary projects it is also possible for specific beneficiaries to keep their data closed if opening their data goes against their legitimate interests or other constraints as per the Grant Agreement.**
 
@@ -115,7 +115,7 @@ Not applicable.
 
 As data is not sensitive or personal, all requests will be granted by the Data Steward automatically. 
 
-**Metadata:**
+#### Metadata:
 
 **Will metadata be made openly available and licenced under a public domain dedication CC0, as per the Grant Agreement? If not, please clarify why. Will metadata contain information to enable the user to access the data?** 
 
@@ -129,7 +129,7 @@ Data and accompanying metadata will be made available for as long as it can be h
 
 All data will be fully reproducible via scripts included in the repository, with an accompanying readme on how to do so. Any code required by the data developed as part of the Project, is hosted at an accompanying open-source code base repository at the CR.
 
-### 3. Making data interoperable
+### 2.3 Making data interoperable
 
 **What data and metadata vocabularies, standards, formats or methodologies will you follow to make your data interoperable to allow data exchange and re-use within and across disciplines? Will you follow community-endorsed interoperability best practices? Which ones?** 
 
@@ -143,7 +143,7 @@ All mappings will be published and included in the data repository.
 
 Qualified references will be used where appropriate.
 
-### 4. Increase data re-use
+### 2.4 Increase data re-use
 
 **How will you provide documentation needed to validate data analysis and facilitate data re-use (e.g. readme files with information on methodology, codebooks, data cleaning, analyses, variable definitions, units of measurement, etc.)?**
 
