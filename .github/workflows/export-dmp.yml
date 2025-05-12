@@ -1,23 +1,21 @@
 name: DMP.md to DMP.pdf and DMP.html
 # This workflow is triggered on pushes to the repository.
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'README.md'
+  release:
+    types: [published]
   workflow_dispatch:
 jobs:
   export-dmp:
-    name: Build PDF
+    name: Build PDF and HTML
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_path: README.md
-          output_dir: export
-      - uses: actions/upload-artifact@v4
+      - uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
         with:
-          name: export
-          path: export
+          files: |
+            README.md
+            README.html
