@@ -4,6 +4,8 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   export-dmp:
     name: Build PDF and HTML
@@ -13,9 +15,10 @@ jobs:
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_path: README.md
+          output_dir: out
       - uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
           files: |
-            README.md
-            README.html
+            out/README.pdf
+            out/README.html

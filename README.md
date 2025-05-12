@@ -141,7 +141,7 @@ All data will be fully reproducible via scripts included in the repository, with
 
 **Q. What data and metadata vocabularies, standards, formats or methodologies will you follow to make your data interoperable to allow data exchange and re-use within and across disciplines? Will you follow community-endorsed interoperability best practices? Which ones?** 
 
-Data will be stored as human readable plaintext or as HDF5 (`.h5`, `.hdf5`). HDF5 is standard data storage format for heterogeneous data readable by a wide variety of different software and programming languages.
+Data will be stored as human readable plaintext or as [HDF5](https://github.com/HDFGroup/hdf5) (`.h5`, `.hdf5`). HDF5 is standard data storage format for heterogeneous data readable by a wide variety of different software and programming languages.
 Alternatively, data can be used stored using the open source and documented. [Warsaw Data Format](https://gitlab.fizyka.pw.edu.pl/wtools/wslda/-/wikis/W-data%20format) (`.wdat`) as this is a commonly used format at IFPAN.
 Metadata will adhere to Dublin Core standard. 
 
