@@ -1,17 +1,17 @@
 *(To be filled in and uploaded as deliverable in the Portal Grant Management System, at the due date foreseen in the system (and regularly updated).*
 
-![Picture 1][image1]*The template is recommended but not mandatory. If you do not use it, please make however sure that you comply with the research data management requirements under Article 17 of the Grant Agreement.)*
+*(The template is recommended but not mandatory. If you do not use it, please make however sure that you comply with the research data management requirements under Article 17 of the Grant Agreement.)*
 
 | PROJECT |  |
 | :---- | :---- |
-| **Project number:** | \[project number\] |
-| **Project acronym:** | **EUCENTRAL** |
-| **Project name:** | \[project title\] |
+| **Project number:** | 01186579  |
+| **Project acronym:** | EUCENTRAL |
+| **Project name:** | Modelling Center for Quantum Technologies |
 
 | DATA MANAGEMENT PLAN |  |
 | :---- | :---- |
-| **Date**: | \[18/04/2025\] |
-| **Version:** | \[0.2\] |
+| **Date**: | 12/05/2025 |
+| **Version:** | 0.3 |
 
 ## Glossary of Terms
 
@@ -19,9 +19,11 @@
 
 2. **CR:** The Code Repository. In this case, Github.
 
-3. **DMP:** This Data Management Plan
+3. **LR:** The Local Repository. In this case, the locally hosted server at CFT-PAN.
 
-4. **GA:** The Grant Agreement. 
+4. **DMP:** This Data Management Plan.
+
+5. **GA:** The Grant Agreement.
 
 ## 1. Data Summary
 
@@ -31,13 +33,19 @@ No existing data will be reused.
 
 **Q. What types and formats of data will the project generate or re-use?**
 
-The project will generate representations of a quantum mechanical wave-functions stored as HDF5. Input parameters will be stored as plain text JSON (.json). In the event HDF5 and JSON are unsuitable, open-source formats. Such formats must be accompanied by an open-source with details (included version, required packages) of a language environment that can load such a format. 
+The project will generate representations of a quantum mechanical wave-functions and associated supplemantary data such as quantum observables.
+All data must be stored either in human readable plaintext file formats (such as `.txt`, `.json`) or one of the following allowed binary formats:
 
-Figures generated from the data sill be exported as both a printable image format (.png) and the scalable vector graphics format (.pdf). 
+- [HDF5](https://github.com/HDFGroup/hdf5) (`.h5`, `.hdf5`)
+- [Warsaw Data Format](https://gitlab.fizyka.pw.edu.pl/wtools/wslda/-/wikis/W-data%20format) (`.wdat`)
+
+In the event that one of the above two binary formats is unsuitable, an altenative *open-source* format may be used provided adequate justification is provided to the Data Steward. In this case, the data must be accompanied by details (included version, required packages) of a language environment that can load such a format. 
+
+Figures generated from the data sill be exported as both a printable image format (.png) and a scalable vector graphics format (.pdf). 
 
 **Q. What is the purpose of the data generation or re-use and its relation to the objectives of the project?**
 
-The data is as result of numerical simulations of quantum mechanical systems. The purpose of the data is such that it can be used to provide insights into the quantum many-body problem. Such insights can then be used to a) inform experiment and b) advance theoretical understanding. Specifically, data will be used in publication of peer-reviewed research articles. 
+The data is as result of numerical simulations of quantum mechanical systems. The purpose of the data is to provide insights into the quantum many-body problem. Such insights can then be used to a) inform experiment and b) advance theoretical understanding. Specifically, data will be used in the publication of peer-reviewed research articles. 
 
 **Q. What is the expected size of the data that you intend to generate or re-use?**
 
@@ -49,7 +57,7 @@ All data is generated as both input and output of numerical simulations.
 
 **Q. To whom might your data be useful ('data utility'), outside your project?**
 
-The data will be useful to researchers who wish to perform further analysis on the outputs of the data.
+The data will be useful to researchers who wish to perform further analysis on the outputs of the data, and for peers to review and revify the results of published numerical work.
 
 ## 2. FAIR data
 
@@ -57,7 +65,7 @@ The data will be useful to researchers who wish to perform further analysis on t
 
 **Q. Will data be identified by a persistent identifier?**
 
-Data will be assigned a DOI by the TR. Code will be not be assigned a DOI by default as the CR does not assign DOI. Instead, the CR repository name forms the unique identifier for codebases stored at the CR. This is such that code can be published in journals where a DOI gets assigned by the journals. 
+Data will be assigned a DOI by the TR. Standalone software will be not be assigned a DOI by default as the CR does not assign DOI. Instead, the CR repository name forms the unique identifier for codebases stored at the CR. This is such that code can be published in journals where a DOI gets assigned by the journal.
 
 **Q. Will rich metadata be provided to allow discovery? What metadata will be created? What disciplinary or general standards will be followed? In case metadata standards do not exist in your discipline, please outline what type of metadata will be created and how.**
 
@@ -123,17 +131,19 @@ Yes data will be licensed under CC0 as per both the GA and the TR policy and is 
 
 **Q. How long will the data remain available and findable? Will metadata be guaranteed to remain available after data is no longer available?**
 
-Data and accompanying metadata will be made available for as long as it can be hosted at the TR. Data will also be backed at CFT-PAN offline for the duration of the project plus an additional 5 years at a minimum, At the end of period, an assessment of the current data storage capabilities by the Data Steward will take place to evaluate for how long the data can be stored going forward.
+Data and accompanying metadata will be made available for as long as it can be hosted at the TR. Data will also be hosted at CFT-PAN offline at the LR for the duration of the project plus an additional 5 years at a minimum. At the end of period, an assessment of the current data storage capabilities by the Data Steward will take place to evaluate for how long the data can be stored going forward. Metadata will be stored seperately at the LR and will remain for as long as reasonably possible, potentially beyond the duration of the associated data, such that data in the TR can be referenced by the LR.
 
 **Q. Will documentation or reference about any software be needed to access or read the data be included? Will it be possible to include the relevant software (e.g. in open source code)?**
 
-All data will be fully reproducible via scripts included in the repository, with an accompanying readme on how to do so. Any code required by the data developed as part of the Project, is hosted at an accompanying open-source code base repository at the CR.
+All data will be fully reproducible via scripts included in the repository, with an accompanying readme on how to do so. Any code required by the data developed as part of the Project is hosted at an accompanying open-source code base repository at the CR.
 
 ### 2.3 Making data interoperable
 
 **Q. What data and metadata vocabularies, standards, formats or methodologies will you follow to make your data interoperable to allow data exchange and re-use within and across disciplines? Will you follow community-endorsed interoperability best practices? Which ones?** 
 
-Data will be stored as HDF5 (.h5, .hdf5). HDF5 is standard data storage format for heterogeneous data readable by a wide variety of different software and programming languages. Input parameters must be stored as human-readable JSON (.json). Metadata will adhere to Dublin Core standard. 
+Data will be stored as human readable plaintext or as HDF5 (`.h5`, `.hdf5`). HDF5 is standard data storage format for heterogeneous data readable by a wide variety of different software and programming languages.
+Alternatively, data can be used stored using the open source and documented. [Warsaw Data Format](https://gitlab.fizyka.pw.edu.pl/wtools/wslda/-/wikis/W-data%20format) (`.wdat`) as this is a commonly used format at IFPAN.
+Metadata will adhere to Dublin Core standard. 
 
 **Q. In case it is unavoidable that you use uncommon or generate project specific ontologies or vocabularies, will you provide mappings to more commonly used ontologies? Will you openly publish the generated ontologies or vocabularies to allow reusing, refining or extending them?**
 
@@ -141,7 +151,7 @@ All mappings will be published and included in the data repository.
 
 **Q. Will your data include qualified references[^1] to other data (e.g. other data from your project, or datasets from previous research)?**
 
-Qualified references will be used where appropriate.
+Qualified references will be used where appropriate including references to any known work published using the data, and any further data derived from the data. These references can be included in the TR.
 
 ### 2.4 Increase data re-use
 
@@ -149,11 +159,20 @@ Qualified references will be used where appropriate.
 
 All data used in publication must be reproducible as a requirement for publication. Data reproducibility is ensured by:
 
-1. Any physical variables appearing in data and data-generating code must be accompanied with physical units as a code comment. All non-derivative (input) variables must be accompanied by a code comment explaining their function. 
+1. Any physical variables appearing in data and data-generating code must be accompanied with physical units as a code comment (if unitful). All non-derivative (input) variables must be accompanied by a code comment explaining their function. 
 
-2. A source code (non-binary) script must be included in the data repository that can reproduce the data. 
+2. A source code (non-binary) script(s) must be included in the data repository that can reproduce the data. 
 
-3. Any binary files produced and required to produce the data must be accompanied with the source code and details on how the binary can be generated. Trusted third-party binaries should be accompanied with installation instructions, or a link to relevant installation instructions. 
+3. Any binary files produced and required to produce the data must be accompanied with the source code and details on how the binary can be generated. Trusted third-party binaries should be accompanied with installation instructions, or a link to relevant installation instructions.
+
+To ensure data re-usabilty, the following standards are required when code is included in the data:
+
+| Langauge | Standard |
+| ------   | -------- |
+| Python   | a `requirements.txt` containing the output of `pip freeze` |
+| Julia    | both a `Project.toml` and a `Manifest.toml` |
+
+If any code is written in a programming langauge not included in the table, the Data Steward should be consulted to define an appropriate standard.
 
 **Q. Will your data be made freely available in the public domain to permit the widest re-use possible? Will your data be licensed using standard reuse licenses, in line with the obligations set out in the Grant Agreement?**
 
@@ -171,7 +190,7 @@ The provenance of the data can be traced via the versioning system of the TR.
 
 Data must be reproducible as a condition of publication. As such, data generated must be accompanied by a self contained environment containing the scripts used to produce the data. These scripts must adhere to the requirements set out in this DMP. 
 
-The Data Steward must have reviewed the data to confirm that it adheres to the DMP as a condition for publication of research using the data/ 
+The Data Steward must have reviewed the data to confirm that it adheres to the DMP as a condition for publication of research using the data.
 
 **Q. Further to the FAIR principles, DMPs should also address research outputs other than data, and should carefully consider aspects related to the allocation of resources, data security and ethical aspects.**
 
@@ -213,7 +232,10 @@ The raw data, whose analysis has been used in publications, will be stored in ac
 
 All data is is open and freely available. No data is sensitive or personal. 
 
-Data is backed up offline at CFT and online at Google Cloud. In the event the TR is no longer accessible. Data will be restored from the backup into a new trusted repository. 
+Data is backed up offline at CFT-PAN in the LR. 
+While the LR does not exist, data is instead backed up on the existing local-hosted Nextcloud server at CFT-PAN: Nextcloud is an open-source cloud storage platform and includes a range of security features, such as encryption, secure servers, and data backup and recovery.
+Once the LR becomes operatational, data shall be migrated to the LR.
+In the event the TR is no longer accessible. Data will be restored from the backup into a new trusted repository. 
 
 **Q. Will the data be safely stored in trusted repositories for long term preservation and curation?**
 
@@ -240,7 +262,7 @@ The Polish regulations are to be introduced soon. For the time being CTP PAS is 
 | VERSION | PUBLICATION  DATE | CHANGE |
 | 0.1 | 04.03.2025 | Initial version (new MFF). |
 | 0.2 | 18.03.2025 | Add more details about funds. Adjust sever size from 50 to 10 TiB in alignment of current plans. Remove Google Cloud Storage option as does not adhere to Fair. |
-|  |  |  |
+| 0.3 | 12.05.2025 | Clarify supported data formats and allow support for `.wdat`. Add standards for programming languages. Provide details of Nextcloud interim local repository. Other misc changes and typo fixes (see git diff). |
 |  |  |  |
 
 [^1]:  	*A qualified reference is a cross-reference that explains its intent. For example, X is regulator of Y is a much more qualified reference than X is associated with Y, or X see also Y. The goal therefore is to create as many meaningful links as possible between (meta)data resources to enrich the contextual knowledge about the data. (Source: [https://www.go-fair.org/fair-principles/i3-metadata-include-qualified-references-metadata/](https://www.go-fair.org/fair-principles/i3-metadata-include-qualified-references-metadata/))*
