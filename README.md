@@ -208,11 +208,11 @@ Such outputs have been considered by the DMP
 
 Costs include (TBD):
 
-1. Salary XXXX of the Data Stewart for the duration of the project.
+1. Cost of 5,000 PLN per month to fund the pre-tax 0.5 part time salary of the Data Stewart for the duration of the project.
 
-2. 10,000 euro for the 10TiB of storage required for the project.
+2. 10,000 EUR for the 10TiB of storage required for the project.
 
-3. Estimated running costs of 4 000 euro for electricity to host the server (5 years, current price list of energy in Poland). 
+3. Estimated running costs of 4,000 EUR for electricity to host the server (5 years, current price list of energy in Poland). 
 
 **Q. How will these be covered? Note that costs related to research data/output management are eligible as part of the Horizon Europe grant (if compliant with the Grant Agreement conditions)**
 
