@@ -208,7 +208,7 @@ Such outputs have been considered by the DMP
 
 Costs include (TBD):
 
-1. Cost of 5,000 PLN per month to fund the pre-tax 0.5 part time salary of the Data Stewart for the duration of the project.
+1. Cost of 5,000 PLN gross/month to fund the 0.5 part-time salary of the Data Stewart for the duration of the project.
 
 2. 10,000 EUR for the 10TiB of storage required for the project.
 

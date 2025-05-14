@@ -16,11 +16,13 @@ jobs:
         with:
           input_path: README.md
           output_dir: out
-      - run: mv out/README.pdf out/QMC-DMP.pdf
-      - run: mv out/README.html out/QMC-DMP.html
+      - name: Rename output files
+        run: |
+            cp out/README.pdf ${{ runner.temp }}/QMC-DMP.pdf 
+            cp out/README.html ${{ runner.temp }}/QMC-DMP.html 
       - uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
           files: |
-            out/QMC-DMP.pdf
-            out/QMC-DMP.html
+            ${{ runner.temp }}/QMC-DMP.pdf
+            ${{ runner.temp }}/QMC-DMP.html
