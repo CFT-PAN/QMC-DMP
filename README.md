@@ -10,8 +10,8 @@
 
 | DATA MANAGEMENT PLAN |  |
 | :---- | :---- |
-| **Date**: | 12/05/2025 |
-| **Version:** | 0.3 |
+| **Date**: | 12.05.2025 |
+| **Version:** | 1.0 |
 
 ## Glossary of Terms
 
@@ -262,7 +262,7 @@ The Polish regulations are to be introduced soon. For the time being CTP PAS is 
 | VERSION | PUBLICATION  DATE | CHANGE |
 | 0.1 | 04.03.2025 | Initial version (new MFF). |
 | 0.2 | 18.03.2025 | Add more details about funds. Adjust sever size from 50 to 10 TiB in alignment of current plans. Remove Google Cloud Storage option as does not adhere to Fair. |
-| 0.3 | 12.05.2025 | Clarify supported data formats and allow support for `.wdat`. Add standards for programming languages. Provide details of Nextcloud interim local repository. Other misc changes and typo fixes (see git diff). |
+| 1.0 | 12.05.2025 | Clarify supported data formats and allow support for `.wdat`. Add standards for programming languages. Provide details of Nextcloud interim local repository. Other misc changes and typo fixes (see git diff). |
 |  |  |  |
 
 [^1]:  	*A qualified reference is a cross-reference that explains its intent. For example, X is regulator of Y is a much more qualified reference than X is associated with Y, or X see also Y. The goal therefore is to create as many meaningful links as possible between (meta)data resources to enrich the contextual knowledge about the data. (Source: [https://www.go-fair.org/fair-principles/i3-metadata-include-qualified-references-metadata/](https://www.go-fair.org/fair-principles/i3-metadata-include-qualified-references-metadata/))*
