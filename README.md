@@ -10,8 +10,8 @@
 
 | DATA MANAGEMENT PLAN |  |
 | :---- | :---- |
-| **Date**: | 12.05.2025 |
-| **Version:** | 1.0 |
+| **Date**: | 02.02.2026 |
+| **Version:** | 2.0 |
 
 ## Glossary of Terms
 
@@ -19,7 +19,7 @@
 
 2. **CR:** The Code Repository. In this case, Github.
 
-3. **LR:** The Local Repository. In this case, the locally hosted server at CFT-PAN.
+3. **LR:** The Local Repository. In this case, the locally hosted server at CFT PAN.
 
 4. **DMP:** This Data Management Plan.
 
@@ -39,9 +39,9 @@ All data must be stored either in human readable plaintext file formats (such as
 - [HDF5](https://github.com/HDFGroup/hdf5) (`.h5`, `.hdf5`)
 - [Warsaw Data Format](https://gitlab.fizyka.pw.edu.pl/wtools/wslda/-/wikis/W-data%20format) (`.wdat`)
 
-In the event that one of the above two binary formats is unsuitable, an altenative *open-source* format may be used provided adequate justification is provided to the Data Steward. In this case, the data must be accompanied by details (included version, required packages) of a language environment that can load such a format. 
+In the event that one of the above two binary formats is unsuitable, an alternative *open-source* format may be used provided adequate justification is provided to the Data Steward. In this case, the data must be accompanied by details (included version, required packages) of a language environment that can load such a format. 
 
-Figures generated from the data sill be exported as both a printable image format (.png) and a scalable vector graphics format (.pdf). 
+Figures generated from the data will be exported as both a printable image format (.png) and a scalable vector graphics format (.pdf). 
 
 **Q. What is the purpose of the data generation or re-use and its relation to the objectives of the project?**
 
@@ -49,7 +49,7 @@ The data is as result of numerical simulations of quantum mechanical systems. Th
 
 **Q. What is the expected size of the data that you intend to generate or re-use?**
 
-Across the 5 year project, the total size of the data generated is expected to be no more than 10TiB. 
+Across the 5 year project, the total size of the data generated is expected to be no more than 10TiB.
 
 **Q. What is the origin/provenance of the data, either generated or re-used?**
 
@@ -57,7 +57,7 @@ All data is generated as both input and output of numerical simulations.
 
 **Q. To whom might your data be useful ('data utility'), outside your project?**
 
-The data will be useful to researchers who wish to perform further analysis on the outputs of the data, and for peers to review and revify the results of published numerical work.
+The data will be useful to researchers who wish to perform further analysis on the outputs of the data, and for peers to review and verify the results of published numerical work.
 
 ## 2. FAIR data
 
@@ -65,7 +65,7 @@ The data will be useful to researchers who wish to perform further analysis on t
 
 **Q. Will data be identified by a persistent identifier?**
 
-Data will be assigned a DOI by the TR. Standalone software will be not be assigned a DOI by default as the CR does not assign DOI. Instead, the CR repository name forms the unique identifier for codebases stored at the CR. This is such that code can be published in journals where a DOI gets assigned by the journal.
+Data will be assigned a DOI by the TR. Standalone software will not be assigned a DOI by default as the CR does not assign DOI. Instead, the CR repository name forms the unique identifier for codebases stored at the CR. This allows the code to be published in journals, where a DOI may be assigned upon publication.
 
 **Q. Will rich metadata be provided to allow discovery? What metadata will be created? What disciplinary or general standards will be followed? In case metadata standards do not exist in your discipline, please outline what type of metadata will be created and how.**
 
@@ -77,7 +77,7 @@ Keywords will be used when required by publications associated with the data. Wh
 
 **Q. Will metadata be offered in such a way that it can be harvested and indexed?** 
 
-"All metadata is exported via OAI-PMH and can be harvested" as per the TR policy.
+All metadata is exported via the OAI-PMH protocol (Open Archives Initiative Protocol for Metadata Harvesting) and can be harvested in accordance with TR policy.
 
 ### 2.2 Making data accessible
 
@@ -85,7 +85,7 @@ Keywords will be used when required by publications associated with the data. Wh
 
 **Q. Will the data be deposited in a trusted repository?**
 
-Data will be stored in the TR. The TR is hosted and managed by CERN which have experience handling operating large data repositories. The CERN project has funding for the next 20 years and the TR will exist for along as the CERN project had funding. 
+Data will be stored in the TR. The TR is hosted and managed by CERN, which has extensive experience in operating large-scale data repositories. The CERN project is funded for the next 20 years, and the TR will be maintained for as long as the project remains funded.
 
 Code will be stored publicly in the CR. The CR is the most widely used repository for code storage and version control and is already routinely used by many researchers.  
 
@@ -131,19 +131,17 @@ Yes data will be licensed under CC0 as per both the GA and the TR policy and is 
 
 **Q. How long will the data remain available and findable? Will metadata be guaranteed to remain available after data is no longer available?**
 
-Data and accompanying metadata will be made available for as long as it can be hosted at the TR. Data will also be hosted at CFT-PAN offline at the LR for the duration of the project plus an additional 5 years at a minimum. At the end of period, an assessment of the current data storage capabilities by the Data Steward will take place to evaluate for how long the data can be stored going forward. Metadata will be stored seperately at the LR and will remain for as long as reasonably possible, potentially beyond the duration of the associated data, such that data in the TR can be referenced by the LR.
+Data and accompanying metadata will be made available for as long as it can be hosted at the TR. Data will also be hosted at CFT PAN offline at the LR for the duration of the project plus an additional 5 years at a minimum. At the end of period, an assessment of the current data storage capabilities by the Data Steward will take place to evaluate for how long the data can be stored going forward. Metadata will be stored seperately at the LR and will remain for as long as reasonably possible, potentially beyond the duration of the associated data, such that data in the TR can be referenced by the LR.
 
 **Q. Will documentation or reference about any software be needed to access or read the data be included? Will it be possible to include the relevant software (e.g. in open source code)?**
 
-All data will be fully reproducible via scripts included in the repository, with an accompanying readme on how to do so. Any code required by the data developed as part of the Project is hosted at an accompanying open-source code base repository at the CR.
+All data will be fully reproducible via scripts included in the repository, with an accompanying README file on how to do so. Any code required by the data developed as part of the Project is hosted at an accompanying open-source code base repository at the CR.
 
 ### 2.3 Making data interoperable
 
 **Q. What data and metadata vocabularies, standards, formats or methodologies will you follow to make your data interoperable to allow data exchange and re-use within and across disciplines? Will you follow community-endorsed interoperability best practices? Which ones?** 
 
-Data will be stored as human readable plaintext or as [HDF5](https://github.com/HDFGroup/hdf5) (`.h5`, `.hdf5`). HDF5 is standard data storage format for heterogeneous data readable by a wide variety of different software and programming languages.
-Alternatively, data can be used stored using the open source and documented. [Warsaw Data Format](https://gitlab.fizyka.pw.edu.pl/wtools/wslda/-/wikis/W-data%20format) (`.wdat`) as this is a commonly used format at IFPAN.
-Metadata will adhere to Dublin Core standard. 
+Data will be stored as human readable plaintext or as [HDF5](https://github.com/HDFGroup/hdf5) (`.h5`, `.hdf5`). HDF5 is standard data storage format for heterogeneous data readable by a wide variety of different software and programming languages. Alternatively, data can be used stored using the open source and documented. [Warsaw Data Format](https://gitlab.fizyka.pw.edu.pl/wtools/wslda/-/wikis/W-data%20format) (`.wdat`) as this is a commonly used format at IF PAN. Metadata will adhere to Dublin Core standard. 
 
 **Q. In case it is unavoidable that you use uncommon or generate project specific ontologies or vocabularies, will you provide mappings to more commonly used ontologies? Will you openly publish the generated ontologies or vocabularies to allow reusing, refining or extending them?**
 
@@ -180,7 +178,7 @@ Data will be made freely available in the public domain via the TR and licensed 
 
 **Q. Will the data produced in the project be useable by third parties, in particular after the end of the project?**
 
-Data produced will never be removed from the TR by CFT. Provided the TR exists data can be accessed by third-parties. In the event the TR is no longer available, 
+Data produced will never be removed from the TR by CFT PAN. Provided the TR exists, the data can be accessed by third parties. In the event that the TR is no longer available, the data will be migrated to an alternative trusted repository to ensure continued access and usability after the end of the project.
 
 **Q. Will the provenance of the data be thoroughly documented using the appropriate standards?**
 
@@ -194,13 +192,17 @@ The Data Steward must have reviewed the data to confirm that it adheres to the D
 
 **Q. Further to the FAIR principles, DMPs should also address research outputs other than data, and should carefully consider aspects related to the allocation of resources, data security and ethical aspects.**
 
+The project produces only numerical research data and no additional research outputs requiring separate management. Appropriate resources for storage, curation, and repository deposit are provided through the TR infrastructure. Data security is ensured by the repository's institutional hosting and backup procedures. No personal or sensitive data are involved, therefore, no specific ethical or privacy issues apply.
+
 ## 3. Other research outputs
 
 **Q. In addition to the management of data, beneficiaries should also consider and plan for the management of other research outputs that may be generated or re-used throughout their projects. Such outputs can be either digital (e.g. software, workflows, protocols, models, etc.) or physical (e.g. new materials, antibodies, reagents, samples, etc.).**
 
-Such outputs have been considered by the DMP
+The project does not produce research outputs other than numerical data, hence no additional digital or physical outputs requiring management will be generated.
 
 **Q. Beneficiaries should consider which of the questions pertaining to FAIR data above, can apply to the management of other research outputs, and should strive to provide sufficient detail on how their research outputs will be managed and shared, or made available for re-use, in line with the FAIR principles.**
+
+As no other research outputs are generated, the FAIR principles apply solely to the numerical data, which will be managed and shared via the TR in line with FAIR requirements.
 
 ## 4. Allocation of resources
 
@@ -208,11 +210,11 @@ Such outputs have been considered by the DMP
 
 Costs include (TBD):
 
-1. Cost of 5,000 PLN gross/month to fund the 0.5 part-time salary of the Data Stewart for the duration of the project.
+1. Cost of 5'000 PLN gross/month to fund the 0.5 part-time salary of the Data Stewart for the duration of the project.
 
-2. 10,000 EUR for the 10TiB of storage required for the project.
+2. 10'000 EUR for the 10TiB of storage required for the project.
 
-3. Estimated running costs of 4,000 EUR for electricity to host the server (5 years, current price list of energy in Poland). 
+3. Estimated running costs of 4'000 EUR for electricity to host the server (5 years, current price list of energy in Poland). 
 
 **Q. How will these be covered? Note that costs related to research data/output management are eligible as part of the Horizon Europe grant (if compliant with the Grant Agreement conditions)**
 
@@ -232,14 +234,11 @@ The raw data, whose analysis has been used in publications, will be stored in ac
 
 All data is is open and freely available. No data is sensitive or personal. 
 
-Data is backed up offline at CFT-PAN in the LR. 
-While the LR does not exist, data is instead backed up on the existing local-hosted Nextcloud server at CFT-PAN: Nextcloud is an open-source cloud storage platform and includes a range of security features, such as encryption, secure servers, and data backup and recovery.
-Once the LR becomes operatational, data shall be migrated to the LR.
-In the event the TR is no longer accessible. Data will be restored from the backup into a new trusted repository. 
+Data is backed up offline at CFT PAN in the LR. While the LR does not exist, data is instead backed up on the existing local-hosted Nextcloud server at CFT PAN: Nextcloud is an open-source cloud storage platform and includes a range of security features, such as encryption, secure servers, and data backup and recovery. Once the LR becomes operational, data shall be migrated to the LR. In the event the TR is no longer accessible. Data will be restored from the backup into a new trusted repository. 
 
 **Q. Will the data be safely stored in trusted repositories for long term preservation and curation?**
 
-The data will be stored on at TR.
+The data will be stored on TR.
 
 ## 6. Ethics
 
